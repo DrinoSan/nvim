@@ -9,6 +9,7 @@ lsp.ensure_installed({
     'eslint',
     'sumneko_lua',
     'rust_analyzer',
+    'cmake',
 })
 
 
@@ -88,6 +89,7 @@ lsp.on_attach(function(client, bufnr)
         print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
     end, opts)
 end)
+
 
 
 lsp.setup()

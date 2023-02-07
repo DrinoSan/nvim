@@ -57,11 +57,14 @@ use {
 
 use ('windwp/nvim-autopairs')
 
+use ('tpope/vim-commentary')
+
+use ('lukas-reineke/indent-blankline.nvim')
+
 
 -- Automatically set up your configuration after cloning packer.nvim
--- Put this at the end after all plugins
-if packer_bootstrap then
-	require('packer').sync()
-end
-
+  -- Put this at the end after all plugins
+  if packer_bootstrap then
+    require('packer').sync()
+  end
 end)
