@@ -8,6 +8,9 @@ ls.add_snippets( "all", {
   ls.parser.parse_snippet(
     'cheader',
     '//-----------------------------------------------------------------------------\n\n'),
+  ls.parser.parse_snippet(
+    'cfcomment',
+    '//-----------------------------------------------------------------------------\n// Function: ${1} \n// @parameter: '),
 })
 
 -- Map "Ctrl + p" (in insert mode)
