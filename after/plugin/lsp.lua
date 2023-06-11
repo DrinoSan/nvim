@@ -7,7 +7,6 @@ lsp.ensure_installed({
     'clangd',
     'tsserver',
     'eslint',
-    'sumneko_lua',
     'rust_analyzer',
     'cmake',
 })
@@ -33,18 +32,6 @@ set signcolumn=yes
 autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
 
-
-
--- Fix Undefined global 'vim'
-lsp.configure('sumneko_lua', {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
-})
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
