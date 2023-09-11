@@ -58,7 +58,7 @@ lsp.setup_nvim_cmp({
 
 
 lsp.on_attach(function(client, bufnr)
-    print("help")
+    print("SAND LSP RUNNING")
     local opts = { buffer = bufnr, remap = false }
 
     vim.keymap.set('n', 'gD', function() vim.lsp.buf.declaration() end, opts)
