@@ -1,13 +1,11 @@
 -- Learn the keybindings, see :help lsp-zero-keybindings
 -- Learn to configure LSP servers, see :help lsp-zero-api-showcase
 local lsp = require('lsp-zero')
+
 lsp.preset('recommended')
 
 lsp.ensure_installed({
     'clangd',
-    'tsserver',
-    'eslint',
-    'rust_analyzer',
     'cmake',
 })
 
@@ -77,7 +75,6 @@ lsp.on_attach(function(client, bufnr)
         print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
     end, opts)
 end)
-
 
 lsp.setup()
 
