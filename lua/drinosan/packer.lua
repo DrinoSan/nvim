@@ -71,6 +71,13 @@ use({
 	run = "make install_jsregexp"
 })
 
+use {
+  'nvim-tree/nvim-tree.lua',
+  requires = {
+    'nvim-tree/nvim-web-devicons', -- optional
+  },
+}
+
 
 -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
