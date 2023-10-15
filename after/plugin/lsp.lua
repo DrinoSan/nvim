@@ -9,7 +9,6 @@ lsp.ensure_installed({
     'cmake',
 })
 
-
 --Set completeopt to have a better completion experience
 -- :help completeopt
 -- menuone: popup even when there's only one match
@@ -55,6 +54,7 @@ lsp.setup_nvim_cmp({
 })
 
 
+
 lsp.on_attach(function(client, bufnr)
     print("SAND LSP RUNNING")
     local opts = { buffer = bufnr, remap = false }
@@ -77,6 +77,12 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
+require('lspconfig').clangd.setup({
+    cmd = {
+      "clangd",
+      "--header-insertion=never",
+  }
+})
 
 vim.diagnostic.config({
     virtual_text = true,
