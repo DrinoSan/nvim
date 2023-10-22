@@ -33,3 +33,11 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>w", "<cmd>ClangdSwitchSourceHeader<CR>")
+
+
+-- Search and replace like Vscode ctrl + d
+-- * put current word in search register this automatically jumps to the next one
+-- ``jumps back and cgn does the search replace thing
+-- with "." we can replace next and with "n" we skip
+vim.keymap.set("n", "<leader>x", "*``cgn")
+vim.keymap.set("n", "<leader>X", "#``cgn")
