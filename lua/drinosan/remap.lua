@@ -33,7 +33,6 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
-vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
@@ -51,6 +50,10 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- C++ stuff switching between header and source
 vim.keymap.set("n", "<leader>w", "<cmd>ClangdSwitchSourceHeader<CR>")
 
+-- Compile cmake project
+vim.keymap.set("n", "Q", "<cmd>Task start cmake build<CR>")
+-- Generate cmake project
+vim.keymap.set("n", "QQ", "<cmd>Task start cmake configure<CR>")
 
 -- Search and replace like Vscode ctrl + d
 -- * put current word in search register this automatically jumps to the next one
