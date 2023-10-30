@@ -61,3 +61,9 @@ vim.keymap.set("n", "QQ", "<cmd>Task start cmake configure<CR>")
 -- with "." we can replace next and with "n" we skip
 vim.keymap.set("n", "<leader>x", "*``cgn")
 vim.keymap.set("n", "<leader>X", "#``cgn")
+
+
+-- TODO
+-- Need to find a shortcut for closing and opening quickfix
+-- :ccl is the command to close the quickfix but remember you can still iterate over it even while closed
+-- with <C-j> <C-k>
