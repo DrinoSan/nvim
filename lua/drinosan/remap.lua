@@ -27,6 +27,8 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 -- In visual mode mark the text and remove it but does not save it in the register as only delte (d) would do
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
+THIS IS SUPER TEST FOO
+
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
@@ -67,3 +69,6 @@ vim.keymap.set("n", "<leader>X", "#``cgn")
 -- Need to find a shortcut for closing and opening quickfix
 -- :ccl is the command to close the quickfix but remember you can still iterate over it even while closed
 -- with <C-j> <C-k>
+--
+-- Interesting key combo
+-- If for example you want to delete THIS THREE WORDS then just hit wd3b
