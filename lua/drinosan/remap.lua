@@ -27,8 +27,6 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 -- In visual mode mark the text and remove it but does not save it in the register as only delte (d) would do
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
-THIS IS SUPER TEST FOO
-
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
