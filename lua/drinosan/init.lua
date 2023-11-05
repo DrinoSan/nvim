@@ -6,9 +6,12 @@ require("drinosan.testLua")
 
 
 
-vim.api.nvim_create_autocmd({ "BufEnter", nil }, {
+vim.api.nvim_create_autocmd("BufEnter", {
     pattern = { "*.cpp", "*.hpp" },
     callback = function()
         print("Entering a C++ file")
+        print("BEGIN")
+        print("END")
+        print(vim.bo.ft)
     end,
 })
