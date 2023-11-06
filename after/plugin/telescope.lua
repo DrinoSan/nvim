@@ -1,4 +1,3 @@
-local themes = require('telescope.themes')
 require('telescope').setup {
     defaults = {
         layout_config = {
@@ -7,7 +6,12 @@ require('telescope').setup {
     },
     pickers = {
         find_files = {
+            layout_strategy = 'horizontal',
             theme = "dropdown",
+            layout_config = {
+                height = 0.95,
+                width = 0.70,
+            }
         }
     },
 }
