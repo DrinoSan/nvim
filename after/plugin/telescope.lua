@@ -16,8 +16,22 @@ require('telescope').setup {
     },
 }
 
+-- Define a custom telescope command to list files in $HOME/.config
+function List_config_files()
+    local config_dir = vim.fn.expand('$HOME') .. '/.config/nvim'
+    local find_command = {
+        'find', config_dir, '-type', 'f', '-print'
+    }
+
+    require 'telescope.builtin'.find_files {
+        find_command = find_command,
+        prompt_title = 'Config Files',
+    }
+end
+
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<C-f>', List_config_files, {})
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
