@@ -18,7 +18,7 @@ require('telescope').setup {
 
 -- Define a custom telescope command to list files in $HOME/.config
 function List_config_files()
-    local config_dir = vim.fn.expand('$HOME') .. '/.config/nvim'
+    local config_dir = os.getenv('HOME') .. '/.config/nvim'
     local find_command = {
         'find', config_dir, '-type', 'f', '-print'
     }

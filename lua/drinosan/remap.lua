@@ -31,7 +31,7 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz") --greatest remap ever
 -- Text to be replaced must be highlighted
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
--- In visual mode mark the text and remove it but does not save it in the register as only delte (d) would do
+-- In visual mode mark the text and remove it but does not save it in the register as only delete (d) would do. So we can still use what is in the register d
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- next greatest remap ever : asbjornHaland
