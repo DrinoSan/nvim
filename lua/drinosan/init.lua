@@ -3,6 +3,7 @@ require("drinosan.set")
 require("drinosan.packer")
 require("drinosan.luasnip")
 require("drinosan.testLua")
+require("drinosan.which_key")
 
 
 
