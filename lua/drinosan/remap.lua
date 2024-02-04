@@ -1,8 +1,8 @@
-vim.g.some_var = {
-  key1 = "value",
-  key2 = 300
-}
-vim.print(vim.g.some_var)
+-- vim.g.some_var = {
+--   key1 = "value",
+--   key2 = 300
+-- }
+-- vim.print(vim.g.some_var)
 
 vim.g.mapleader = " "
 
