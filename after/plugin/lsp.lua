@@ -20,14 +20,6 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = { 'clangd' },
     handlers = {
-        clangd = function()
---            require('lspconfig').clangd.setup({
---                cmd = {
---                    'clangd',
---                    '--header-insertion=never',
---                },
---            })
---        end,
         lsp_zero.default_setup,
         lua_ls = function()
             local lua_opts = lsp_zero.nvim_lua_ls()
