@@ -4,4 +4,20 @@
 -- See the kickstart.nvim README for more information
 return {
   require 'custom.plugins.harpoon',
+
+  -- My fancy plugins WIP
+  {
+    'DrinoSan/scratchMe',
+    config = function()
+      require('scratchMe').setup()
+    end,
+  },
+
+  -- {
+  --   dir = '/Users/sandi/DEV/nvimPlugins/scrachtMe',
+  --   name = 'scratchMe',
+  --   config = function()
+  --     require('scratchMe').setup()
+  --   end,
+  -- },
 }
